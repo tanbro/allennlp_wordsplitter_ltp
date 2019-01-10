@@ -7,6 +7,7 @@ verify_ssl = true
 allennlp-wordsplitter-ltp = {editable = true,path = "."}
 pylint = "*"
 autopep8 = "*"
+twine = "*"
 
 [packages]
 
