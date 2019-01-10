@@ -1,6 +1,6 @@
 # allennlp_wordsplitter_ltpnlp
 
-Add a [LTP] `WordSplitter` into [AllenNLP]'s tokenizers.
+Add a [LTP][] `WordSplitter` into [AllenNLP][]'s tokenizers.
 
 ## config
 
