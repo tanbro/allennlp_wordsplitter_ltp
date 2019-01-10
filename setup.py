@@ -29,6 +29,7 @@ setup(
     install_requires=[
         'allennlp<0.9,>=0.7',
         'requests',
+        'overrides',
     ],
 
     extras_require={
