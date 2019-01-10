@@ -22,17 +22,17 @@ setup(
         # guess-next-dev:   automatically guesses the next development version (default)
         # post-release:     generates post release versions (adds postN)
         'version_scheme': 'guess-next-dev',
-        'write_to': 'src/allennlp_wordsplitter_ltpnlp/_version.py',
+        'write_to': 'src/allennlp_wordsplitter_ltp/_version.py',
     },
     setup_requires=['setuptools_scm', 'setuptools_scm_git_archive'],
 
     install_requires=[
-        'allennlp<0.8,>=0.7',
+        'allennlp<0.9,>=0.7',
         'requests',
     ],
 
     extras_require={
-        'pyltp': ['pyltp'],
+        'ltp': ['pyltp'],
     },
 
     tests_require=[],
