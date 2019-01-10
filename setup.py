@@ -8,13 +8,13 @@ setuptools script file
 from setuptools import setup, find_packages
 
 setup(
-    name='allennlp_wordsplitter_ltpnlp',
+    name='allennlp_wordsplitter_ltp',
     namespace_packages=[],
     packages=find_packages('src'),
     package_dir={'': 'src'},
 
     description='LTP word splitter for AllenNLP',
-    url='https://github.com/tanbro/allennlp_wordsplitter_ltpnlp',
+    url='https://github.com/tanbro/allennlp_wordsplitter_ltp',
     author='liu xue yan',
     author_email='liu_xue_yan@foxmail.com',
 

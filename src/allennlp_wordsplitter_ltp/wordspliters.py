@@ -27,15 +27,20 @@ class LtpRemoteWordSplitter(WordSplitter):
     """
 
     def __init__(self,
-                 url: str = 'http://localhost:12345/ltp'
+                 url: str = 'http://localhost:12345/ltp',
+                 max_workers: int = None
                  ):
         """
         Parameters
         ----------
         url : str, optional
             HTTP URL of `ltp_server` to call it's Web API (the default is 'http://localhost:12345/ltp')
+
+        max_workers: int, optional
+            The maximum number of threads that can be used to query LTP web server.
         """
         self._url = url
+        self._max_workers = max_workers
 
     @overrides
     def split_words(self, sentence: str) -> List[Token]:
@@ -43,7 +48,7 @@ class LtpRemoteWordSplitter(WordSplitter):
 
     @overrides
     def batch_split_words(self, sentences: List[str]) -> List[List[Token]]:
-        with ThreadPoolExecutor() as executor:
+        with ThreadPoolExecutor(max_workers=self._max_workers) as executor:
             return [Token(ret_val) for ret_val in executor.map(
                 lambda s: [t for t in self._segment(s)],
                 sentences
