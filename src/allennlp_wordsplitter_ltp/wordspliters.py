@@ -33,7 +33,7 @@ class LtpRemoteWordSplitter(WordSplitter):
         Parameters
         ----------
         url : str, optional
-            HTTP URL of `ltp_server` to call it's Web API (the default is 'http://localhost:12345/ltp')        
+            HTTP URL of `ltp_server` to call it's Web API (the default is 'http://localhost:12345/ltp')
         """
         self._url = url
 
